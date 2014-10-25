@@ -21,3 +21,15 @@ Global setting:
 
     $.detectSwipe.threshold // The number of pixels your finger must move to trigger a swipe event.  Defaults is 20.
     $.detectSwipe.preventDefault // Should touchmove events be prevented?  Defaults to true.
+
+#### What's in this fork?
+
+A new global setting!
+    $.detectSwipe.scrollExceptionCondition
+    
+In case there are situations where you don't want swipe to be enabled, like you have an overflow container that you want to take the scroll. Pass this a function that returns true when that exception condition is met. Here's an example
+````
+$.detectSwipe.scrollExceptionCondition = function(){
+	return ($('body').attr('data-side-drawer-open') == 'true' || $('body').attr('data-side-drawer-state') == 'changing' );
+}
+````
