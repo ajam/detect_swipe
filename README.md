@@ -7,31 +7,33 @@ Based on Andreas Waltl's [jQuery TouchWipe](http://www.netcu.de/jquery-touchwipe
 
 How to use
 ----------
-
-    $(".selector").on('swipeleft',  function(){ /*...*/ })
-                  .on('swiperight', function(){ /*...*/ })
-                  .on('swipeup',    function(){ /*...*/ })
-                  .on('swipedown',  function(){ /*...*/ });
-
+````js
+$(".selector").on('swipeleft',  function(){ /*...*/ })
+        .on('swiperight', function(){ /*...*/ })
+        .on('swipeup',    function(){ /*...*/ })
+        .on('swipedown',  function(){ /*...*/ });
+````
 This won't have any effect on non-touch devices. You can rely on:
-
-    $.detectSwipe.enabled // true on touch devices, false otherwise
-
+````js
+$.detectSwipe.enabled // true on touch devices, false otherwise
+````
 Global setting:
 
-    $.detectSwipe.threshold // The number of pixels your finger must move to trigger a swipe event.  Defaults is 20.
-    $.detectSwipe.preventDefault // Should touchmove events be prevented?  Defaults to true.
-
+````js
+$.detectSwipe.threshold // The number of pixels your finger must move to trigger a swipe event.  Defaults is 20.
+$.detectSwipe.preventDefault // Should touchmove events be prevented?  Defaults to true.
+````
 #### What's in this fork?
 
 A new global setting!
 
-````
+````js
 $.detectSwipe.scrollExceptionCondition
 ````
     
 In case there are situations where you don't want swipe to be enabled, like you have an overflow container that you want to take the scroll. Pass this a function that returns true when that exception condition is met. Here's an example
-````
+
+````js
 $.detectSwipe.scrollExceptionCondition = function(){
 	return ($('body').attr('data-side-drawer-open') == 'true' || $('body').attr('data-side-drawer-state') == 'changing' );
 }
