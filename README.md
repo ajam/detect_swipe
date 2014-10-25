@@ -25,7 +25,10 @@ Global setting:
 #### What's in this fork?
 
 A new global setting!
-    $.detectSwipe.scrollExceptionCondition
+
+````
+$.detectSwipe.scrollExceptionCondition
+````
     
 In case there are situations where you don't want swipe to be enabled, like you have an overflow container that you want to take the scroll. Pass this a function that returns true when that exception condition is met. Here's an example
 ````
