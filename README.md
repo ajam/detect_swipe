@@ -47,5 +47,5 @@ You can now do
 $(".selector").on('pinchin',  function(){ /*...*/ });
 ````
 
-This currently fires on both pinching in and pinching out it will soon differentiate.
+This currently fires on both pinching in and pinching out, but it will soon differentiate.
 
