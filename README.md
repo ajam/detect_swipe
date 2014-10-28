@@ -25,7 +25,7 @@ $.detectSwipe.preventDefault // Should touchmove events be prevented?  Defaults 
 ````
 #### What's in this fork?
 
-A new global setting!
+##### A new global setting!
 
 ````js
 $.detectSwipe.scrollExceptionCondition
@@ -38,3 +38,14 @@ $.detectSwipe.scrollExceptionCondition = function(){
 	return ($('body').attr('data-side-drawer-open') == 'true' || $('body').attr('data-side-drawer-state') == 'changing' );
 }
 ````
+
+##### And pinch support!
+
+You can now do
+
+````js
+$(".selector").on('pinchin',  function(){ /*...*/ });
+````
+
+This currently fires on both pinching in and pinching out it will soon differentiate.
+
