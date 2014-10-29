@@ -46,6 +46,7 @@
       	action = 'pinch';
       	// TODO, add directional detection
       	// For Pulp, the action is the same whether you're pinching in or out
+      	// This could be one way to implement http://stackoverflow.com/questions/11183174/simplest-way-to-detect-a-pinch
       	dir = 'out';
       }
       if(dir) {
