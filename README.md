@@ -28,13 +28,13 @@ $.detectSwipe.preventDefault // Should touchmove events be prevented?  Defaults 
 ##### A new global setting!
 
 ````js
-$.detectSwipe.scrollExceptionCondition
+$.detectSwipe.swipeExceptionCondition
 ````
     
 In case there are situations where you don't want swipe to be enabled, like you have an overflow container that you want to take the scroll. Pass this a function that returns true when that exception condition is met. Here's an example
 
 ````js
-$.detectSwipe.scrollExceptionCondition = function(){
+$.detectSwipe.swipeExceptionCondition = function(){
 	return ($('body').attr('data-side-drawer-open') == 'true' || $('body').attr('data-side-drawer-state') == 'changing' );
 }
 ````

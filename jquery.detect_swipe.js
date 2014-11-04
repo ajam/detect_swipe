@@ -24,7 +24,7 @@
   }
 
   function onTouchMove(e) {
-  	if ( $.detectSwipe.scrollExceptionCondition() ) { return false; }
+  	if ( $.detectSwipe.swipeExceptionCondition() ) { return false; }
     if ( $.detectSwipe.preventDefault ) { e.preventDefault(); }
     if(isMoving) {
       var x = e.touches[0].pageX;
